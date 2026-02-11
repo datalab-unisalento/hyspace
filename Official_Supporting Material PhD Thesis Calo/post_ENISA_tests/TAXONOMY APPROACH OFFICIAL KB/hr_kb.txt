@@ -1,0 +1,339 @@
+{
+  "ontology": {
+    "domain": "Satellite Human Resources Segment",
+    "description": "This segment encompasses all personnel involved throughout the satellite lifecycle, including those responsible for development, support functions, and real-time operations. These actors span a wide range of technical, engineering, scientific, and operational disciplines that ensure the functionality and mission success of satellite systems.",
+    "segment_type": "human_resources",
+    "categories": [
+      {
+        "name": "Satellite Lifecycle Actors",
+        "description": "Includes all individuals involved in the development, support, and operational phases of satellite systems.",
+        "metadata": {
+          "lifecycle_focus": [1, 2, 3, 4, 5, 6, 7]
+        }
+      }
+    ],
+    "classes": [
+      {
+        "category": "Satellite Lifecycle Actors",
+        "name": "Actors Participating in Development Activities",
+        "description": "Actors participating in development activities include researchers, engineers, designers, and scientists who participate in the development of satellites or their supporting elements.",
+        "lifecycle_phase": [1],
+        "metadata": {
+          "category_type": "Satellite Lifecycle Actors"
+        },
+        "subclasses": [
+          {
+            "name": "Aerospace Engineers",
+            "description": "Develop avionic features of the satellite.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Physicists",
+            "description": "Participate in various aspects of satellite development concerning the influence of natural forces on the satellite.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Cybersecurity Engineers",
+            "description": "Develop cybersecurity features of satellite software.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Data Engineers / Scientists",
+            "description": "Develop data infrastructure supporting the functioning of the satellite.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Electronic Engineers",
+            "description": "Develop electronic and electrotechnical features of the satellite.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Software Engineers",
+            "description": "Develop the satellite’s software.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Manufacturing Engineers",
+            "description": "Adjust and optimise the specific manufacturing systems in order to produce satellite components.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Mechanical Engineers",
+            "description": "Develop mechanical features of the satellite.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Propulsion Engineers",
+            "description": "Develop the satellite’s propulsion systems.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Test Engineers",
+            "description": "Plan and conduct testing of the satellite and its components.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Researchers / Scientists",
+            "description": "May participate in the development of various mission-specific satellite features.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Engineers in Relevant Technical Fields",
+            "description": "Specialists in technical domains that are specific to the satellite’s nature and mission type.",
+            "lifecycle_phase": [1],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          }
+        ]
+      },
+      {
+        "category": "Satellite Lifecycle Actors",
+        "name": "Actors Participating in Supporting Activities",
+        "description": "Actors participating in supporting tasks include support technicians engaged in the physical construction and assembly of satellites or satellite components as well as the maintenance of these during all phases of the lifecycle. This also includes support scientific personnel, whose expertise on various scientific areas, such as weather, atmospheric conditions or specific systems is needed during some phases of the satellite lifecycle, such as development, launch or operations.",
+        "lifecycle_phase": [2, 3, 4, 6],
+        "metadata": {
+          "category_type": "Satellite Lifecycle Actors"
+        },
+        "subclasses": [
+          {
+            "name": "Astronomers",
+            "description": "Supply other lifecycle actors with expertise on influence of celestial bodies and forces on the satellite, its functioning and operations.",
+            "lifecycle_phase": [1, 7],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Atmospheric Scientists",
+            "description": "Support other actors with expertise on atmospheric forces and their influence on the satellite and its operations.",
+            "lifecycle_phase": [1, 6, 7],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Data Analysts",
+            "description": "Analyses various data relevant to the satellite operations and support other actors.",
+            "lifecycle_phase": [6],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Manufacturing Technicians",
+            "description": "Participate in the manufacturing of the satellite components.",
+            "lifecycle_phase": [2],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Mechanical Technicians",
+            "description": "Install, inspect and maintain the mechanical components of the satellite during its assembly.",
+            "lifecycle_phase": [2],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Aerospace Technicians",
+            "description": "Install, inspect and maintain the avionic components of the satellite during its assembly, and conduct on-site control of satellite avionic features prior to its launch.",
+            "lifecycle_phase": [2, 4],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Electronics Technicians",
+            "description": "Install, inspect and maintain the electronic components of the satellite during its assembly.",
+            "lifecycle_phase": [2],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Test Technicians",
+            "description": "Conduct tests of the satellites or their features.",
+            "lifecycle_phase": [3],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Launch Technicians",
+            "description": "Conduct the launch related tasks on-site.",
+            "lifecycle_phase": [4],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Launch Engineers",
+            "description": "Manage on-site testing and last check of the satellite and its components immediately before its launch.",
+            "lifecycle_phase": [4],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Launch Director",
+            "description": "Manages the overall process of the satellite launch: receives reports of other relevant actors, authorizes the process and directs the relevant actors during the process.",
+            "lifecycle_phase": [4, 5],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Operations Safety Manager",
+            "description": "Manages and enforces the safety of satellite launch operations.",
+            "lifecycle_phase": [4, 5],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Atmospheric Scientists",
+            "description": "Evaluate the weather conditions during the launch and assess the feasibility of the satellite launch.",
+            "lifecycle_phase": [4],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "GIS Analysts (Geographic Information Systems)",
+            "description": "Plan the navigational path of the satellite or its carrier during launch.",
+            "lifecycle_phase": [6, 7],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Logistics and Support Staff",
+            "description": "Conduct tasks related to transportation of satellite or its components on the launch site and supports other satellite actors during the launch.",
+            "lifecycle_phase": [2, 6],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Technicians concerned with technical fields in Relevant Technical Fields",
+            "description": "May participate in the installation, inspection and maintenance of various mission-specific satellite features (robotics, laser technology etc.).",
+            "lifecycle_phase": [2],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          }
+        ]
+      },
+      {
+        "category": "Satellite Lifecycle Actors",
+        "name": "Actors Participating in Satellite Operations",
+        "description": "Actors participating in satellite operations include actors who are directly engaged in the operations phase, once satellites are deployed in orbit. Their tasks include monitoring of satellite functions and management of mission-related tasks.",
+        "lifecycle_phase": [5, 6, 7],
+        "metadata": {
+          "category_type": "Satellite Lifecycle Actors"
+        },
+        "subclasses": [
+          {
+            "name": "SOC Operators (SOC - Satellite Operations Centre)",
+            "description": "Remotely operate a satellite from the Satellite Operations Centre.",
+            "lifecycle_phase": [5, 6, 7],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "SOC Leader",
+            "description": "Manages operations of the Satellite Operations Centre.",
+            "lifecycle_phase": [5, 6, 7],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "GIS Analysts (Geographic Information Systems)",
+            "description": "Utilises data from GIS in planning of the satellite’s mission and operations.",
+            "lifecycle_phase": [6, 7],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Communications Engineers",
+            "description": "Establish, adjust, and maintain the communication links between satellite segments.",
+            "lifecycle_phase": [6],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Mission Planners",
+            "description": "Plan a satellite mission with the assistance of other actors.",
+            "lifecycle_phase": [6],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Payload Operators",
+            "description": "Operate the payload, based on the specific nature of the satellite’s mission.",
+            "lifecycle_phase": [6],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Ground Station Operators",
+            "description": "Operate and maintain the ground stations.",
+            "lifecycle_phase": [6],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          },
+          {
+            "name": "Specialists concerned with technical fields in Relevant Technical Fields",
+            "description": "May participate in satellite’s operations, based on its specific technical features.",
+            "lifecycle_phase": [6],
+            "metadata": {
+              "category_type": "Satellite Lifecycle Actors"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
