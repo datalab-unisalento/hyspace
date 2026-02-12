@@ -1,0 +1,310 @@
+{
+  "ontology": {
+    "domain": "Space Threat Taxonomy",
+    "description": "This taxonomy categorizes all potential threats affecting space systems, from intentional attacks to natural disasters and legacy infrastructure issues. It provides a foundational structure for classifying threats across the satellite lifecycle and operational domains.",
+    "categories": [
+      {
+        "name": "Nefarious Activity / Abuse (NAA)",
+        "description": "Intended actions that target ICT systems, infrastructure, and networks by means of malicious acts with the aim to either steal, alter, or destroy a specified target.",
+        "classes": [
+          {
+            "name": "Abuse of Leaked Data",
+            "description": "Use of previously leaked data and information for malicious purposes. Examples may include use of leaked credentials for launching subsequent phishing attacks or gaining unauthorised access using these.",
+            "cia_affected": ["Confidentiality"],
+            "affected_assets": ["Ground: Production Document Management which includes Configuration Management System Prototyping and software development / Integrated Design Engineering & Enterprise Resource Planning (ERP) software & miscellaneous software) Email servers, databases, operating systems, and other solutions for day-to-day business operations. Phones, laptops, tablets, and other devices for day-to-day business operations."]
+          },
+          {
+            "name": "Abuse / Falsification of Rights",
+            "description": "Misuse or modification of access rights and permissions to IT systems may see adversaries gain access to these systems, 
+after which they could be able to affect multitude of processes in any segment of the satellite lifecycle. The adversaries may affect those processes to collect information, change them or incapacitate them. This threat is frequently materialised via malicious insiders trading credentials for 
+monetary rewards.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": ["Ground: Design development and quality assurance, Assembly Manufacturing Systems Miscellaneous (software) Miscellaneous (endpoint devices) Logistics Management System Checkout systems Mission Control System Network (WAN) User: Consumer endpoint devices".]
+          },
+          {
+            "name": "Compromising Confidential Information (Data Breaches): Exfiltration",
+            "description": "Exfiltration of sensitive satellite data, resulting in a data breach. Exfiltration can be conducted over alternative protocols 
+and web services, including also automated exfiltration.",
+            "cia_affected": ["Confidentiality"],
+            "affected_assets": ["Ground: SLE/SDL protocols, User: endpoint interfaces and devices".]
+          },
+          {
+            "name": "Denial of Service (DoS)",
+            "description": "DoS can pose a threat to both the satellite control centre and TTC ground stations, as well as the bus and payload of the in the space segment, affecting their availability. Given the common practice of segregation between the bus and the payload, in the case of the space segment, such threats would primarily need to be executed through the bus. DoS may be perpetrated through various kinds of techniques, such as flooding of satellite with requests/commands.",
+            "cia_affected": ["Availability"],
+            "affected_assets": ["Ground: all assets,  Space: all assets, User: Consumer Interfaces devices".]
+          },
+          {
+            "name": "Data Modification",
+            "description": "Although a threat manifestation element of several threat clusters, modification of data as a threat category refers to the potential for adversaries to modify registers, system and authentication processes, and/or cloud compute infrastructure.",
+            "cia_affected": ["Confidentiality", "Integrity"],
+            "affected_assets": [Ground: Production Document Management which includes Configuration Management System Prototyping and software development / Integrated Design Engineering & Enterprise Resource Planning (ERP) software & miscellaneous software Email servers, databases, operating systems, and other solutions for day-to-day business operations. Phones, laptops, tablets, and other devices for day-to-day business operations]
+          },
+          {
+            "name": "Electromagnetic Interference",
+            "description": "Analog interference with electromagnetic signals that are used for controlling heaters and flow valves of the propulsion subsystem. Attacks aimed at these signals could cause freezing of propellant lines, valves locking, lead to unstable spinning of the satellite or put it in de-orbit.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Space: EPS, RTOS and AOCS ]
+          },
+          {
+            "name": "Firmware Corruption",
+            "description": "Threats against firmware include the potential of adversaries overwriting or corrupting firmware devices (e.g. flash memory contents of system OS) making them inoperable or unable to boot.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: all assets Space: all assets]
+          },
+          {
+            "name": "Identity Theft",
+            "description": "Targeted take-over of an identity of certain satellite lifecycle actors, by acquiring their personal items, information or other artifacts which would allow adversaries to pose as those actors. This may grant adversaries access to processes, information or even facilities where they could perpetrate multitude of actions whose results can compromise each aspect of CIA triad of satellite lifecycle.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": ["Human Resources"]
+          },
+          {
+            "name": "Malicious Code / Software / Activity: Cryptographic Exploit",
+            "description": "Exploitation of weak communications protocols, commonly due to a lack of encryption, or malicious use of compromised master keys or any encryption key. This threat may result in adversary gaining access to any communication/information in the satellite lifecycle.",
+            "cia_affected": ["Confidentiality"],
+            "affected_assets": [Ground: Crypto Hardware/Software & Transport Container (Crypto Unit Board) & Satellite Control Centre (Crypto Unit Ground) Space: Crypto Unit Board]
+          },
+          {
+            "name": "Malicious Code / Software / Activity: Malicious Injection",
+            "description": "Injection of malicious software (e.g. rootkits, bootkits, backdoors) into space operations control systems and/or satellite data receivers and transmitters. Malicious code could also be injected into software updates, affecting for example on-orbit software updates, upgrades, patches, or direct memory writes. Malicious injection could enable satellite data extraction and/or manipulation targeting the bus or payload.",
+            "cia_affected": ["Integrity", "Availability"],
+            "affected_assets": [Ground: Production (Manufacturing systems & Simulators & Crypto hardware/software) & Centralised Checkout Systems 
+& Satellite Operations Centre (Mission Control System) Space: BUS (CDHS/COM/) & Payload (PDHS/PLCOM)]
+          },
+          {
+            "name": "Malicious Code / Software / Activity: Network Exploit",
+            "description": "Exploitation of misconfigurations and software vulnerabilities to gain unauthorized access to critical systems and 
+networks. Exploitation of the computer network (CNE) in ground control stations as a result of poor configuration could, for example, lead to unauthorised access to and hence compromise of satellite lifecycle assets.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: Satellite Control Centre & Centralised Checkout Systems & TTC Ground (Antenna) Space: BUS (CDHS, COM) & Payload (PDHS, PLCOM) User: VSAT]
+          },
+          {
+            "name": "Malicious Code / Software / Activity: Sofware and vulnerabilities exploit",
+            "description": "Exploitation of security weaknesses in satellite infrastructure resulting from poor configuration and/or logic or implementation errors. These may result in systemic vulnerabilities and affect the satellites’ reliability and overall stability. Threat actors may exploit such weaknesses by injecting instructions to manipulate control functions, cause resource exhaustion or introduce flaws in satellite components via the supply chain, enabling them to launch subsequent attacks. This threat may encompass time synchronization executions, compromise of 
+boot memory, exploiting faults in geofencing, software defined assets and others.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Ground: Production (Manufacturing systems & Simulators) & Centralised Checkout Systems & Satellite Operations Centre (Mission Control System) Space: Satellite Bus, Satellite payload]
+          },
+          {
+            "name": "Manipulation of Hardware and Software: Zero-Day Exploit",
+            "description": "Exploitation of software vulnerabilities that are at the time of the exploitation unknown to the user. Presenting the so-called 
+"unknown unknown" phenomenon, the Zero-Day exploits are especially threatening, since the users are not aware of the fact that they should be remediating 
+them. Because of the exploitation window, limited detection and response, and significant risk and impact, zero-day vulnerabilities are treated with heightened urgency and specialized approaches in cybersecurity compared to regular software exploits. The Zero-Day exploit may be present in any segment of the satellite lifecycle.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Ground: all assets Space: all assets User: all assets]
+          },
+          {
+            "name": "Preventing Services",
+            "description": "Intentional deactivation of security safeguards such as firewalls, virus scans, log monitoring, etc. This may manifest as a 
+modification of the internal values of the satellite lifecycle assets and may include modification of internal tables, registers, algorithms, cryptographic standards and other software components, as well as inhibiting system recovery.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: Production (Design, development, and quality assurance & Assembly) & Satellite Control Centre]
+          },
+          {
+            "name": "Resource Exhaustion",
+            "description": "Threats of resource exhaustion affect the space segment and can be targeted both at the satellite bus and payload (incl. overall satellite operations, logical storage, and communications). In the case of satellite operations, components such as the payload receive commands to sense, emit, or run whatever mission the satellite has constantly, to the point that the battery is fully drained/depleted. In the case of logical 
+storage, this includes utilisation of storage capacity until the full limit is reached. Finally, communications are affected by the amount of traffic sent.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Space: BUS (CDHS/COM) & Payload (PLCOM/PDHS) satellite ops; BUS (CDHS, OBSW) - logical storage; BUS (COM, antenna) communications]
+          },
+          {
+            "name": "Seizure of Control: Satellite Bus",
+            "description": "Threats to the availability of the satellite bus as a result of adversaries taking control of space assets by exploiting existing vulnerabilities. Such hostile takeovers can result in overtaking control of the management segment to execute malicious commands, as well as complete lockout of legitimate satellite users by overtaking access control.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: TTC Ground (SLE/SDL protocol) Space: BUS (CDHS/COM)]
+          },
+          {
+            "name": "Social Engineering",
+            "description": "Deliberate deception regarding the identity and intention of the perpetrator in order to manipulate the victim to perform specific actions that the adversary wants them to do. The threat is mainly materialised through the launch of phishing or spear phishing. This way, all segments of the satellite lifecycle can be affected, since the adversary can achieve anything from gathering sensitive information.",
+            "cia_affected": ["Confidentiality"],
+            "affected_assets": ["Ground: Design, development, and quality assurance & Satellite Control Centre & Miscellaneous Software/Hardware]
+          },
+          {
+            "name": "Spoofing",
+            "description": "Also known as "malicious misdirection". Threats aimed at deceiving the receiver, seeing adversaries transmitting erroneous 
+data for malicious purposes via what appears to be a legitimate signal. Attacks involving spoofing can be launched on sensor data and/or guidance control, that is, on both the receiver and the transmitter end. Spoofing threats can result in malicious commands being sent to the satellite or erroneous data to the ground stations.",
+            "cia_affected": ["Integrity", "Availability"],
+            "affected_assets": [Ground: TTC Ground (Antenna, SLE/SDL protocol) Space: BUS (COM) User: VSAT]
+          },
+          {
+            "name": "Supply Chain Compromise",
+            "description": "Threats to and from the supply chain including potential leaks of software/tools/data sheets, malicious use of open-source materials on satellite components provided by third parties, the use of common components in satellites running different missions, as well as the 
+potential of introducing malicious software or backdoors through third parties' components. These threats often materialize from the compromise of suppliers' facilities/sites.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Ground: Production (Manufacturing systems & Assembly & Simulators) & Centralised Checkout Systems & Satellite Operations Centre (Mission Control System) & TTC Ground Space: all assets]
+          },
+          {
+            "name": "Theft of Authentication Information",
+            "description": "Threats of physical or logical theft (e.g. via keylogger) with potential impact on assets that are connected to the crypto unit board or the crypto unit ground. Such threats can materialise in different phases of a",satellite's lifecycle, including while the satellite is manufactured, being transported to its launch site, or via attacks on the satellite control centre once the satellite is in orbit." 
+            "cia_affected": ["Confidentiality"],
+            "affected_assets": [Ground: Crypto Hardware/Software & Transport Container (Crypto Unit Board) & Satellite Control Centre (Crypto Unit Ground) & Satellite Control Centre (Mission Control System) Space: BUS (COM, Crypto Unit Board)]
+          },
+          {
+            "name": "Unauthorised Modifications: Parameters",
+            "description": "Deliberate or incorrect modification of a satellite's parameters or test procedures which could enable further tampering with 
+satellite reset and update procedures and result in infinite restarts of the satellite (manipulating RTOS components).",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Space: CDHS (RTOS)]
+          },
+          {
+            "name": "Jamming",
+            "description": "Overpowering the frequency of a legitimate RF signal in order to disrupt communications between the ground station and the satellite, or vice versa. Jamming can result in unauthorised commands for guidance and control being sent to the satellite, injection of malicious 
+code, and/or overall Denial of Service. It is one of the most common threats to space infrastructure targeting both ground and space segments as well as space-link communication and has been increasingly employed by a wide range of threat actors.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: TTC Ground (Antenna) Space: BUS (COM) & Payload (PLCOM) User: VSAT ]
+          },
+          {
+            "name": "Unauthorised Use of Equipment",
+            "description": "Unauthorised access to physical devices in scope of the satellite lifecycle, such as physical workstations, machinery in 
+production/assembly facilities or launch facility, may allow the adversary to conduct multitude of nefarious activities with far reaching consequences for the satellite lifecycle.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Ground: Production (Manufacturing & Assembly) & Satellite Control Centre (group: EGSE/MGSE)]
+          },
+ }
+        ]
+      },
+      {
+        "name": "Eavesdropping / Interception / Hijacking (EIH)",
+        "description": "Actions aiming to listen, interrupt, or seize control of a third party communication without consent.",
+        "classes": [
+          {
+            "name": "Hijacking",
+            "description": "Malicious alteration or complete replacement of a satellite's legitimate signals with the aim to reuse it for another 
+purpose. Hijacking and unauthorised commands to guidance control are a threat to both ground and space segments, primarily impacting the satellite control 
+centre and TTC ground stations, as well as the satellite bus in the space segment. This type of threats can be materialised by compromising the SLE and SDL protocols.",
+            "cia_affected": ["Integrity", "Availability"],
+            "affected_assets": [Ground: Satellite Control Centre & TTC Ground (SLE/SDL protocol) Space: BUS (CDHS & COM) & Payload (PDHS & PLCOM)]
+          },
+          {
+            "name": "Interception of Communication",
+            "description": "Interception of data over a communication channel. This may concern any existing communication link in the satellite lifecycle, 
+inside of specific segments - ground, space, user and human resources - as well as between the segments. It concerns both primary and secondary communication channels (e.g. used as backup). This threat is commonly employed for cyber espionage, as it may compromise any information in the satellite lifecycle. For example, the threat of interception of communication can manifest itself as interception of Multi-Factor Authentication.",
+            "cia_affected": ["Confidentiality"],
+            "affected_assets": [Ground: TTC Ground (Antenna, SLE/SDL protocol) Space: BUS (COM) & Payload (PLCOM) User: VSAT]
+          },
+          {
+            "name": "Man-in-the-Middle",
+            "description": "Threats stemming from Man-in-the-Middle attacks can be materialised by bypassing access control on the COM/PLCOM parts 
+of the satellite, as well as SLE protocol on the ground segment. Similar to DoS, Man-in-the-Middle attacks target the same group of assets satellite control centres and TTC ground stations in the ground segment, as well as the bus and payload in the satellite segment. Additionally, this type of threat 
+can impact VSAT in the user segment.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Ground: Satellite Control Centre & TTC Ground (SLE/SDL protocol) Space: BUS & Payload User: VSAT]
+          },
+          {
+            "name": "Network Manipulation (Bus-Payload Link)",
+            "description": "Threats to the link between connected payload components, in instances where more than one PDHS or UDHS exists (i.e. 
+denial of the link’s availability by one to the others). The materialisation of such threat may result in compromise of multiple services hosted by the satellite. This may potentially lead to payload data leaks from all hosted payload components.",
+            "cia_affected": ["Integrity", "Availability"],
+            "affected_assets": [Space: BUS (CDHS & COM) & Payload (PLCOM & PHDS & UDHS)]
+          },
+          {
+            "name": "Network Traffic Manipulation (TC - Telecommand)",
+            "description": "Threats targeting the ability of a satellite to handle traffic coming from the ground station (telecommand) through TC 
+suppression. This type of threats can impact SLE and SDL protocols.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: Satellite Control Centre & TTC Ground (Antenna & SLE/SDL protocol) Space: BUS (COM)]
+          },
+          {
+            "name": "Position Detection (Telemetry)",
+            "description": "Adversaries obtaining information on the orientation of the satellite enabling them to draw conclusions on itsfunction/mission, 
+orbit, etc. and possibly launch subsequent targeted attacks.",
+            "cia_affected": ["Integrity", "Availability"],
+            "affected_assets": [Ground & Space: SLE/SDL protocols Space: CDHS (OBSW, OBC) / ADCS (group: AOCS)]
+          },
+          {
+            "name": "Replay of Recorded Authentic Communication Traffic",
+            "description": "Replay of previous legitimate messages (communication traffic) at a later time to trigger a system response or to enable 
+access to data. An examples of replay attacks may include attacking the scheduling table to affect tasking.",
+            "cia_affected": ["Integrity", "Availability"],
+            "affected_assets": [Ground & Space: SLE / SDL protocols]
+          },
+          {
+            "name": "Unauthorised Access",
+            "description": "Threat actors gaining and maintaining unauthorised access to a network, which enables them to pre-position themselves 
+for reconnaissance, espionage and/or launch of potential subsequent attacks. The threat can be materialised via web page attacks, cross-site scripting, cross-site request forgery, drive-by hacking, phishing, or attacks on air gapped solutions (i.e. intranet), or through brute force password 
+cracking. Additionally, via masquerading techniques, threat actors presenting themselves as legitimate entities/users can gain unauthorised access.",
+            "cia_affected": ["Confidentiality", "Integrity"],
+            "affected_assets": [Ground: all assets (including SLE/SDL protocol)]
+          }
+        ]
+      },
+      {
+        "name": "Physical Access (PA)",
+        "description": "Actions which aim to destroy, expose, alter, disable, steal or gain unauthorized access to physical assets such as infrastructure, hardware, or interconnection.",
+        "classes": [
+          {
+            "name": "Coercion, Extortion or Corruption",
+            "description": "The threat of violence, other harms in order to gain access to desired premises or information, or manipulating the victim to 
+perform other actions that the adversary wants them to do. This threat may impact any segment of satellite lifecycle, where human activity or interaction is present.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Human resources: all assets ]
+          },
+          {
+            "name": "Damage / Destruction of Segment Assets",
+            "description": "Intentional damage or destruction of satellite infrastructure (hardware and/or software) as a result of intentional adversary action can negatively impact availability of each segment of satellite lifecycle.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: Production & Assembly & Transport & Launch & Satellite Control Centre & TTC Ground Space: all assets]
+          },
+          {
+            "name": "Damage / Destruction of the Satellite via the Use of ASAT (Anti-Satellite Weapon) / Proximity Operations",
+            "description": "Deliberate physical damage to the satellite or some of its segments. This threat can negatively impact any aspect of satellite 
+operations, depending on the specific satellite asset that has been damaged. Physical damage to the satellite can be caused by a deliberate attack via an ASAT weapon. ASAT includes space or ground based directed energy weapons or kinetic weapons intended to physically destroy satellites, namely: high-powered 
+microwave (HPM) weapons, electromagnetic pulse (EMP), highpowered laser weapons, laser dazzling and blinding, and high-altitude nuclear detonation. This also entails proximity operations where rogue space objects approach space assets for the purpose of assessing their capabilities (spying), making physical contact (ramming), or conducting aforementioned attacks.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: TTC Ground Space: all assets]
+          },
+          {
+            "name": "Loss During Shipping",
+            "description": "Any satellite lifecycle asset component may be required to be shipped from one location to other, for multitude of reasons, such as calibration/verification, use, or repair. These transfers may be both internal and external to the satellite lifecycle. During the transfer, the asset may be lost, which would strip any segment of the lifecycle of any capability supplied by this asset.",
+            "cia_affected": ["Availability"],
+            "affected_assets": [Ground: Transport Container - Crypto Unit & Logistics Management Systems]
+          },
+          {
+            "name": "Sabotage Through Hardware / Software",
+            "description": "Threats resulting from connection of unauthorised rogue hardware and software, such as USB sticks, unauthorised applications, etc. may endanger the integrity, confidentiality and availability of satellite components. They can be perpetrated as a result of intentional, targeted human intervention or even on the orbit itself (docking of another satellite).",
+            "cia_affected": ["Integrity", "Availability"],
+            "affected_assets": [Ground: Design, development, and quality assurance & Assembly & Satellite Control Centre]
+          },
+          {
+            "name": "Unauthorized Physical Access",
+            "description": "Unauthorised access/intrusion into buildings, premises and sites. This may result into various types of threats, including compromise, modification, damage to or even theft of the satellite lifecycle assets (ground or space, if they are located on the ground).",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": ["Ground: All assets"]
+          }
+        ]
+      },
+      {
+        "name": "Unintentional Damage (UD)",
+        "description": "Unintentional actions causing destruction, harm, or injury of property or persons and resulting in a failure or reduction in usefulness.",
+        "classes": [
+          {
+            "name": "Lack of Segregation",
+            "description": "Although uncommon, it is possible that a satellite does not have built-in bus-payload segregation, or that segregation is 
+implemented improperly. If these two asset subdomains are not segregated, potential materialisation of threats to the satellite bus can impact a wider set of assets, including the satellite payload.",
+            "cia_affected": ["Confidentiality", "Integrity"],
+            "affected_assets": [Space: BUS (CDHS/COM) & Payload (PDHS/PLCOM/UDHS)]
+          },
+          {
+            "name": "Operating Errors",
+            "description": "Improper handling of systems or applications of satellite lifecycle assets can negatively impact each aspect of satellite lifecycle operations. It can lead to limitation, degradation or outright disruption of function of these assets.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Human Resources: all assets ]
+          },
+          {
+            "name": "Software Misconfiguration",
+            "description": "Improper configuration of software resulting in vulnerabilities such as unsecure code and/or logic errors. These may lead to 
+unauthorised access enabling data corruption/modification (intentional or non intentional) by threat actors, and cause further software or hardware failure, enable use of unauthorised software, or impact the confidentiality, integrity or availability of data.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Ground: Design, development, and quality assurance & Manufacturing systems & Assembly & Simulators & Satellite Control Centre Ground & Space: SLE/SDL protocols]
+          },
+          {
+            "name": "Inadequate Security Planning / Management",
+            "description": "Lack of appropriate security planning in the Planning/Design phases of the lifecycle, resulting in a lack of testing, for example. Lack of adequate security management once the satellite infrastructure is in the operation phase may lead to unidentified or exposed critical assets, which results in a lack of relevant security measures due to limited visibility of the infrastructure in its entirety.",
+            "cia_affected": ["Confidentiality", "Integrity", "Availability"],
+            "affected_assets": [Space: all assets Ground: all assets User: all assets Human Resources: all assets ]
+          }
+        ]
+      }
+    ]
+  }
+}
